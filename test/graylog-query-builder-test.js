@@ -100,3 +100,47 @@ test('TC_013_RAW', (t) => {
 
   t.is(expect, query.build())
 })
+
+test('TC_018_PREPEND', (t) => {
+  const prepend = GraylogQuery.builder()
+    .not()
+    .exists('type')
+
+  const query = GraylogQuery.builder(prepend)
+    .and()
+    .term('ssh')
+
+  const expect = `NOT _exists_:type AND "ssh"`
+
+  t.is(expect, query.build())
+})
+
+test('TC_019_APPEND', (t) => {
+  const append = GraylogQuery.builder()
+    .or()
+    .exists('type')
+
+  const query = GraylogQuery.builder()
+    .term('ssh')
+    .append(append)
+
+  const expect = `"ssh" OR _exists_:type`
+
+  t.is(expect, query.build())
+})
+
+test('TC_020_ESCAPING', (t) => {
+  const query = GraylogQuery.builder()
+    .field('content_type', 'application/json')
+    .and()
+    .field(
+      'response_body',
+      '{"nickname": "[*test] John Doe", "message": "hello?"}'
+    )
+
+  console.log(query.build())
+
+  const expect = `content_type:"application\\/json" AND response_body:"\\{\\"nickname"\\: "\\[\\*test\\] John Doe", "message": "hello\\?"\\}"`
+
+  t.is(expect, query.build())
+})
