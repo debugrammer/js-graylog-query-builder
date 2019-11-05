@@ -30,6 +30,9 @@
     "url": "https://github.com/debugrammer/js-graylog-query-builder/issues"
   },
   "homepage": "https://github.com/debugrammer/js-graylog-query-builder",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
   "devDependencies": {
     "ava": "^2.4.0",
     "eslint": "^6.6.0",
