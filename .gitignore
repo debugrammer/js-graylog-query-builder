@@ -1,0 +1,8 @@
+# Dependency directories
+node_modules/
+
+# IDE
+.idea
+
+# npm package lock file
+package-lock.json

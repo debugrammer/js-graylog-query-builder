@@ -1,0 +1,40 @@
+{
+  "name": "js-graylog-query-builder",
+  "version": "1.0.0",
+  "description": "Graylog Search Query Builder for Graylog REST API",
+  "author": {
+    "name": "Joonsang Park",
+    "email": "debugrammer@gmail.com",
+    "url": "http://joonsang.com"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/debugrammer/js-graylog-query-builder.git"
+  },
+  "scripts": {
+    "prettier": "prettier --write \"**/*.{js,md,json,*rc}\"",
+    "lint": "eslint index.js test lib",
+    "test": "ava"
+  },
+  "keywords": [
+    "graylog",
+    "search query",
+    "query builder"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/debugrammer/js-graylog-query-builder/issues"
+  },
+  "homepage": "https://github.com/debugrammer/js-graylog-query-builder",
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
+  }
+}
