@@ -138,8 +138,6 @@ test('TC_020_ESCAPING', (t) => {
       '{"nickname": "[*test] John Doe", "message": "hello?"}'
     )
 
-  console.log(query.build())
-
   const expect = `content_type:"application\\/json" AND response_body:"\\{\\"nickname"\\: "\\[\\*test\\] John Doe", "message": "hello\\?"\\}"`
 
   t.is(expect, query.build())
