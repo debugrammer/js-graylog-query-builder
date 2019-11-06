@@ -1,5 +1,10 @@
-# Graylog Query Builder for JavaScript [![Build Status](https://travis-ci.org/debugrammer/js-graylog-query-builder.svg?branch=master)](https://travis-ci.org/debugrammer/js-graylog-query-builder)
+# Graylog Query Builder for JavaScript
 > JavaScript version of [Graylog Search Query](https://docs.graylog.org/en/latest/pages/queries.html) Builder especially useful for working with [Graylog REST API](https://docs.graylog.org/en/latest/pages/configuration/rest_api.html).
+
+[![Latest Stable Version](https://img.shields.io/npm/v/js-graylog-query-builder)](https://www.npmjs.com/package/js-graylog-query-builder)
+[![Build Status](https://travis-ci.org/debugrammer/js-graylog-query-builder.svg?branch=master)](https://travis-ci.org/debugrammer/js-graylog-query-builder)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Total Downloads](https://img.shields.io/npm/dt/js-graylog-query-builder)](https://www.npmjs.com/package/js-graylog-query-builder)
 
 ## Installation
 ```
@@ -8,7 +13,7 @@ npm install js-graylog-query-builder
 
 ## Usage
 ```
-const GraylogQuery = require('../lib/graylog-query-builder')
+const GraylogQuery = require('js-graylog-query-builder')
 
 GraylogQuery.builder()
   .field('type', 'ssh')
