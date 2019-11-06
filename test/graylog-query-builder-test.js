@@ -65,6 +65,22 @@ test('TC_008_RANGE_FIELD', (t) => {
   t.is(expect, query.build())
 })
 
+test('TC_009_FUZZ_FIELD', (t) => {
+  const query = GraylogQuery.builder().fuzzField('type', 'ssh')
+
+  const expect = `type:"ssh"~`
+
+  t.is(expect, query.build())
+})
+
+test('TC_010_FUZZ_FIELD_WITH_DISTANCE', (t) => {
+  const query = GraylogQuery.builder().fuzzField('type', 'ssh', 3)
+
+  const expect = `type:"ssh"~3`
+
+  t.is(expect, query.build())
+})
+
 test('TC_011_RANGE', (t) => {
   const query = GraylogQuery.builder().range(
     'http_response_code',
@@ -97,6 +113,57 @@ test('TC_013_RAW', (t) => {
   const query = GraylogQuery.builder().raw('/ethernet[0-9]+/')
 
   const expect = `/ethernet[0-9]+/`
+
+  t.is(expect, query.build())
+})
+
+test('TC_014_NOT', (t) => {
+  const query = GraylogQuery.builder()
+    .not()
+    .exists('type')
+
+  const expect = `NOT _exists_:type`
+
+  t.is(expect, query.build())
+})
+
+test('TC_015_AND', (t) => {
+  const query = GraylogQuery.builder()
+    .term('cat')
+    .and()
+    .term('dog')
+
+  const expect = `"cat" AND "dog"`
+
+  t.is(expect, query.build())
+})
+
+test('TC_016_OR', (t) => {
+  const query = GraylogQuery.builder()
+    .term('cat')
+    .or()
+    .term('dog')
+
+  const expect = `"cat" OR "dog"`
+
+  t.is(expect, query.build())
+})
+
+test('TC_017_PARENTHESES', (t) => {
+  const query = GraylogQuery.builder()
+    .openParen()
+    .term('ssh login')
+    .and()
+    .openParen()
+    .field('source', 'example.org')
+    .or()
+    .field('source', 'another.example.org')
+    .closeParen()
+    .closeParen()
+    .or()
+    .exists('always_find_me')
+
+  const expect = `( "ssh login" AND ( source:"example.org" OR source:"another.example.org" ) ) OR _exists_:always_find_me`
 
   t.is(expect, query.build())
 })
