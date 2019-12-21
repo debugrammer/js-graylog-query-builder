@@ -179,7 +179,7 @@ bytes:{0 TO 64]
 ```
 
 ##### 1.6.2. Date range query
-The dates needs to be UTC
+The dates needs to be UTC.
 
 **Usage:**
 ```
