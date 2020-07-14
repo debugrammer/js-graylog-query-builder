@@ -1,6 +1,6 @@
 {
   "name": "js-graylog-query-builder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Graylog Search Query Builder for Graylog REST API",
   "author": {
     "name": "Joonsang Park",
