@@ -15,7 +15,7 @@
   "scripts": {
     "prettier": "prettier --write \"**/*.{js,md,json,*rc}\"",
     "lint": "eslint index.js test lib",
-    "test": "ava"
+    "test": "ava --timeout 30000"
   },
   "keywords": [
     "graylog",
@@ -31,13 +31,13 @@
   },
   "homepage": "https://github.com/debugrammer/js-graylog-query-builder",
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "ava": "^3.10.1",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
   }
 }

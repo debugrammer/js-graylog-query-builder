@@ -118,9 +118,7 @@ test('TC_013_RAW', (t) => {
 })
 
 test('TC_014_NOT', (t) => {
-  const query = GraylogQuery.builder()
-    .not()
-    .exists('type')
+  const query = GraylogQuery.builder().not().exists('type')
 
   const expect = `NOT _exists_:type`
 
@@ -128,10 +126,7 @@ test('TC_014_NOT', (t) => {
 })
 
 test('TC_015_AND', (t) => {
-  const query = GraylogQuery.builder()
-    .term('cat')
-    .and()
-    .term('dog')
+  const query = GraylogQuery.builder().term('cat').and().term('dog')
 
   const expect = `"cat" AND "dog"`
 
@@ -139,10 +134,7 @@ test('TC_015_AND', (t) => {
 })
 
 test('TC_016_OR', (t) => {
-  const query = GraylogQuery.builder()
-    .term('cat')
-    .or()
-    .term('dog')
+  const query = GraylogQuery.builder().term('cat').or().term('dog')
 
   const expect = `"cat" OR "dog"`
 
@@ -169,13 +161,9 @@ test('TC_017_PARENTHESES', (t) => {
 })
 
 test('TC_018_PREPEND', (t) => {
-  const prepend = GraylogQuery.builder()
-    .not()
-    .exists('type')
+  const prepend = GraylogQuery.builder().not().exists('type')
 
-  const query = GraylogQuery.builder(prepend)
-    .and()
-    .term('ssh')
+  const query = GraylogQuery.builder(prepend).and().term('ssh')
 
   const expect = `NOT _exists_:type AND "ssh"`
 
@@ -183,13 +171,9 @@ test('TC_018_PREPEND', (t) => {
 })
 
 test('TC_019_APPEND', (t) => {
-  const append = GraylogQuery.builder()
-    .or()
-    .exists('type')
+  const append = GraylogQuery.builder().or().exists('type')
 
-  const query = GraylogQuery.builder()
-    .term('ssh')
-    .append(append)
+  const query = GraylogQuery.builder().term('ssh').append(append)
 
   const expect = `"ssh" OR _exists_:type`
 
