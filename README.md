@@ -1,6 +1,6 @@
 # Graylog Query Builder for JavaScript
 
-> JavaScript version of [Graylog Search Query](https://docs.graylog.org/en/latest/pages/queries.html) Builder especially useful for working with [Graylog REST API](https://docs.graylog.org/en/latest/pages/configuration/rest_api.html).
+> JavaScript version of [Graylog Search Query](https://docs.graylog.org/en/latest/pages/searching/query_language.html) Builder especially useful for working with [Graylog REST API](https://docs.graylog.org/en/latest/pages/configuration/rest_api.html).
 
 [![Latest Stable Version](https://img.shields.io/npm/v/js-graylog-query-builder)](https://www.npmjs.com/package/js-graylog-query-builder)
 [![Build Status](https://travis-ci.org/debugrammer/js-graylog-query-builder.svg?branch=master)](https://travis-ci.org/debugrammer/js-graylog-query-builder)
