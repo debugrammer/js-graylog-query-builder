@@ -1,6 +1,6 @@
 {
   "name": "js-graylog-query-builder",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Graylog Search Query Builder for Graylog REST API",
   "author": {
     "name": "Joonsang Park",
@@ -31,13 +31,13 @@
   },
   "homepage": "https://github.com/debugrammer/js-graylog-query-builder",
   "dependencies": {
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "ava": "^3.11.1",
-    "eslint": "^7.6.0",
+    "ava": "^3.12.1",
+    "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.1"
   }
 }
