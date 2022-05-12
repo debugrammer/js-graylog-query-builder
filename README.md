@@ -3,7 +3,7 @@
 > JavaScript version of [Graylog Search Query](https://docs.graylog.org/en/latest/pages/searching/query_language.html) Builder especially useful for working with [Graylog REST API](https://docs.graylog.org/en/latest/pages/configuration/rest_api.html).
 
 [![Latest Stable Version](https://img.shields.io/npm/v/js-graylog-query-builder)](https://www.npmjs.com/package/js-graylog-query-builder)
-[![Build Status](https://app.travis-ci.com/debugrammer/js-graylog-query-builder.svg?branch=master)](https://app.travis-ci.com/github/debugrammer/js-graylog-query-builder)
+![build](https://github.com/debugrammer/js-graylog-query-builder/actions/workflows/build.yml/badge.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Total Downloads](https://img.shields.io/npm/dt/js-graylog-query-builder)](https://www.npmjs.com/package/js-graylog-query-builder)
 
