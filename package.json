@@ -34,8 +34,8 @@
     "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "ava": "^4.2.0",
-    "eslint": "^8.15.0",
+    "ava": "^4.3.0",
+    "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.1.1"
